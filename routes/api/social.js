@@ -1,22 +1,22 @@
 const router = require('express')()
 
 // Load schema
-const Bio = require('../../models/Bio')
+const Social = require('../../models/Social')
 
-// @route GET api/bio
-// @desc Test bio route
+// @route GET api/social
+// @desc Test social route
 // @access Public
 router.get('/test', (req, res) => {
-    res.json({ msg: 'Bio route works' })
+    res.json({ msg: 'Social route works' })
 })
 
-// @route GET api/bio
-// @desc Get bio
+// @route GET api/social
+// @desc Get social
 // @access Public
 router.get('/', (req, res) => {
     // res.json({msg: 'Index works'})
-    Bio.find({})
-        .then(bio => res.json(bio))
+    Social.find({})
+        .then(social => res.json(social))
         .catch(err => console.log(err))
 })
 

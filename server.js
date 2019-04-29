@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 
 // Route
 const bio = require('./routes/api/bio')
+const social = require('./routes/api/social')
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -24,6 +25,7 @@ app.get('/', (req, res) => {
 
 // Use route
 app.use('/api/bio', bio)
+app.use('/api/social', social)
 
 const port = process.env.PORT || 5000
 app.listen(port, () => {
