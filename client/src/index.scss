@@ -1,5 +1,7 @@
+$font: "Arcon-Regular";
+
 @font-face {
-  font-family: "Arcon-Regular";
+  font-family: $font;
   src: url("./assets/font/Arcon-Regular.otf") format("opentype");
   font-weight: bold;
 }
@@ -12,7 +14,7 @@ body {
 }
 
 body {
-  font-family: "Arcon-Regular", sans-serif;
+  font-family: $font, sans-serif;
   font-size: 16px;
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
@@ -22,7 +24,7 @@ h1 {
   font-weight: bold;
   font-size: 1.8em;
   margin: 0;
-  color: black;
+  color: #fff;
 }
 
 p {
@@ -31,10 +33,10 @@ p {
 
 a {
   color: #fff;
-  -webkit-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
-}
 
-a:hover, a:active {
-  opacity: 1;
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
 }

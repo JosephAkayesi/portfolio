@@ -1,0 +1,19 @@
+.description {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 456px;
+  padding-left: 56px;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 49.874px;
+  height: 49.874px;
+}
+
+h1 {
+  padding-bottom: 10px;
+}

@@ -14,7 +14,6 @@ router.get('/test', (req, res) => {
 // @desc Get bio
 // @access Public
 router.get('/', (req, res) => {
-    // res.json({msg: 'Index works'})
     Bio.find({})
         .then(bio => res.json(bio))
         .catch(err => console.log(err))

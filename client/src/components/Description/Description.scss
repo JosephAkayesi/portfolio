@@ -1,0 +1,31 @@
+$mobile: 480px;
+
+@mixin mobiile {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+.description {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 456px;
+  padding-left: 56px;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 56px;
+  height: 43.427px;
+
+  @include mobile {
+    width: 56px;
+    height: 43.427px;
+  }
+}
+
+h1 {
+  padding-bottom: 10px;
+}

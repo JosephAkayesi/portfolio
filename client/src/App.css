@@ -1,33 +1,62 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
+  width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: none;
+  background-size: cover;
+  padding: 5% 6%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  opacity: 0;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (min-width: 480px) {
+  .app {
+    background: transparent url("./assets/images/background.jpg") no-repeat center bottom;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.appSocial {
+  position: absolute;
+  left: -3px;
+  top: 70px;
+  width: 28px;
+  padding: 5% 6%;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  opacity: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .appSocial {
+    left: auto;
+    right: 0;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.appDescription {
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  opacity: 0;
+}
+
+.app.ready {
+  -webkit-transition: opacity 1s cubic-bezier(0, 0.7, 0.3, 1);
+  transition: opacity 1s cubic-bezier(0, 0.7, 0.3, 1);
+  opacity: 1;
+}
+
+.app.ready .appSocial {
+  -webkit-transition: all 0.7s cubic-bezier(0, 0.7, 0.3, 1) 0.5s;
+  transition: all 0.7s cubic-bezier(0, 0.7, 0.3, 1) 0.5s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.app.ready .appDescription {
+  -webkit-transition: all 0.7s cubic-bezier(0, 0.7, 0.3, 1) 0.5s;
+  transition: all 0.7s cubic-bezier(0, 0.7, 0.3, 1) 0.5s;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }

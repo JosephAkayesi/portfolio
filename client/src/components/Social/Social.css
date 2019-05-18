@@ -1,0 +1,14 @@
+.social {
+  text-align: center;
+}
+
+.social a {
+  color: #000000;
+  display: inline-block;
+  font-size: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+.social a:hover {
+  color: #b3bfb8;
+}
