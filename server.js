@@ -32,23 +32,20 @@ app.use('/api/bio', bio)
 
 const port = process.env.PORT || 5000
 
-switch (true) {
-    // Server static assets if in production
-    case process.env.NODE_ENV === 'production':
-        // Set static folder
-        app.use(express.static('client/build'))
+// Server static assets if in production
+if (process.env.NODE_ENV === 'production') {
+    // Set static folder
+    app.use(express.static('client/build'))
 
-        app.get('/*', (req, res) => {
-            res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-        })
-        break
-    case process.env.NODE_ENV !== 'test':
-        app.listen(port, () => {
-            console.log(`Server running on port ${port}`)
-        })
-        break
-    default:
-        break
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    })
 }
 
-module.exports = { app }
+if (process.env.NODE_ENV !== 'test') {
+    app.listen(port, () => {
+        console.log(`Server running on port ${port}`)
+    })
+}
+
+module.exports = app 
