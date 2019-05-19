@@ -20,7 +20,7 @@ class App extends Component {
 
   componentDidMount() {
     store.dispatch(setBio())
-    setTimeout(() => { this.setState({ ready: true }) }, 100);
+    setTimeout(() => { this.setState({ ready: true }) }, 500)
   }
 
   render() {
