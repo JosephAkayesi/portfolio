@@ -1,5 +1,5 @@
 const request = require('supertest')
-const { app } = require('../../../server')
+const app = require('../../../server')
 
 afterAll(async () => {
     await new Promise(resolve => setTimeout(() => resolve(), 5000)); // avoid jest open handle error
