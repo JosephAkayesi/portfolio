@@ -23,10 +23,6 @@ mongoose.connect(db, { useNewUrlParser: true })
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err))
 
-app.get('/', (req, res) => {
-    res.send('Hello World.')
-})
-
 // Use route
 app.use('/api/bio', bio)
 

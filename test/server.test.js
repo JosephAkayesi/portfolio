@@ -11,10 +11,4 @@ describe('Server should', () => {
         expect(res.status).toBe(200)
         done()
     })
-
-    it('send \'Hello World.\'', async (done) => {
-        const res = await request(app).get('/')
-        expect(res.text).toBe('Hello World.')
-        done()
-    })
 })
