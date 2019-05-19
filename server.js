@@ -7,7 +7,7 @@ const path = require('path')
 const enforce = require('express-sslify')
 
 // Express SSLify
-app.use(enforce.HTTPS())
+app.use(enforce.HTTPS({ trustProtoHeader: true }))
 
 // Cors middleware
 app.use(cors())
