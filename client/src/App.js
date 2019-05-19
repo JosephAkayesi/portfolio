@@ -19,8 +19,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    store.dispatch(setBio())
-    setTimeout(() => { this.setState({ ready: true }) }, 1000);
+    store.dispatch(setBio().
+      then(setTimeout(() => { this.setState({ ready: true }) }, 500))
+    )
   }
 
   render() {
