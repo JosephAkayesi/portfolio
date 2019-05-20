@@ -18,9 +18,12 @@ class App extends Component {
     }
   }
 
+  setReadyState = () => {
+    setTimeout(() => { this.setState({ ready: true }) }, 500)
+  }
+
   componentDidMount() {
     store.dispatch(setBio())
-    setTimeout(() => { this.setState({ ready: true }) }, 500)
   }
 
   render() {
@@ -29,10 +32,10 @@ class App extends Component {
       <Provider store={store}>
         <div className={classnames('app', { ready: this.state.ready })}>
           <div className="appDescription">
-            <Description bio={bio} />
+            <Description setReadyState={this.setReadyState} />
           </div>
           <div className="appSocial">
-            <Social bio={bio} />
+            <Social />
           </div>
         </div>
       </Provider>

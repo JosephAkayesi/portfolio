@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import './Social.css'
 
 class Social extends Component {
     render() {
-        const { social } = this.props.bio
+        const { social } = this.props.bio.bio
         return (
             <div>
                 <div className='social'>
@@ -18,5 +20,12 @@ class Social extends Component {
     }
 }
 
+Social.propTypes = {
+    bio: PropTypes.object.isRequired
+}
 
-export default Social
+const mapStateToProps = state => ({
+    bio: state.bio
+})
+
+export default connect(mapStateToProps, {})(Social)
