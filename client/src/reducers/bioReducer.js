@@ -1,7 +1,8 @@
-import { SET_BIO } from '../actions/types'
+import { SET_BIO, SET_READY_STATE } from '../actions/types'
 
 const initialState = {
-    bio: {}
+    bio: {},
+    ready: false
 }
 
 export default function (state = initialState, action) {
@@ -10,6 +11,11 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 bio: action.payload
+            }
+        case SET_READY_STATE:
+            return {
+                ...state,
+                ready: true
             }
         default:
             return state
