@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import { setBio } from './actions/bioActions'
 import store from './store'
