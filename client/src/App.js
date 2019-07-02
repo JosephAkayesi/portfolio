@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
-import classnames from 'classnames'
+import React, { Component, Fragment } from 'react'
 import { Provider } from 'react-redux'
 import { setBio } from './actions/bioActions'
 import store from './store'
 import './App.css'
 
-import Description from './components/Description/Description'
-import Social from './components/Social/Social'
+import Layout from './components/Layout/Layout'
+
 
 class App extends Component {
   constructor() {
@@ -14,12 +13,9 @@ class App extends Component {
 
     this.state = {
       ready: false,
+      loading: true,
       bio: {}
     }
-  }
-
-  setReadyState = () => {
-    setTimeout(() => { this.setState({ ready: true }) }, 500)
   }
 
   componentDidMount() {
@@ -27,17 +23,9 @@ class App extends Component {
   }
 
   render() {
-    const { bio } = store.getState().bio
     return (
       <Provider store={store}>
-        <div className={classnames('app', { ready: this.state.ready })}>
-          <div className="appDescription">
-            <Description setReadyState={this.setReadyState} />
-          </div>
-          <div className="appSocial">
-            <Social />
-          </div>
-        </div>
+        <Layout />
       </Provider>
     )
   }

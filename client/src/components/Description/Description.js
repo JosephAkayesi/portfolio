@@ -6,12 +6,6 @@ import logo from './logo.png';
 
 
 class Description extends Component {
-    componentDidMount() {
-        if (!Object.keys(this.props.bio.bio).length) {
-            this.props.setReadyState()
-        }
-    }
-
     render() {
         const { bio } = this.props.bio
         return (
