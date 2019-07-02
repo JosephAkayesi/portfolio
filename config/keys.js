@@ -5,6 +5,6 @@ if(process.env.NODE_ENV){
 }
 else {
     module.exports = {
-        mongoURI:  'mongodb://localhost/portfolio',
+        mongoURI:  'mongodb://localhost/portfolio'
     }
 }
