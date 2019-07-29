@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const path = require('path')
 const enforce = require('express-sslify')
+const prerender = require('prerender-node')
 
 // Express SSLify
 app.use(enforce.HTTPS({ trustProtoHeader: true }))
@@ -18,6 +19,9 @@ const bio = require('./routes/api/bio')
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+
+// Prerender middleware for SEO
+app.use(prerender.set('prerenderToken', process.env.PRERENDERTOKEN))
 
 // DB config
 const db = require('./config/keys').mongoURI
