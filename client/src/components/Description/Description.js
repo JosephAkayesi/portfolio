@@ -11,7 +11,7 @@ class Description extends Component {
         return (
             <div className='description'>
                 <h1>_</h1>
-                <img className='logo' src={logo} alt="JosephAkayesi" />
+                <img className='logo' src={logo} alt="Joseph Akayesi" />
                 <p>{bio.introduction}</p>
                 <p>{bio.body}</p>
                 <p>{bio.conclusion}</p>
