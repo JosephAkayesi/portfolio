@@ -8,7 +8,7 @@ const enforce = require('express-sslify')
 const prerender = require('prerender-node')
 
 // Express SSLify
-app.use(enforce.HTTPS({ trustProtoHeader: false }))
+app.use(enforce.HTTPS({ trustProtoHeader: true }))
 
 // Cors middleware
 app.use(cors())
