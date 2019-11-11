@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import Linkify from 'react-linkify'
 import './Description.css';
 import logo from './logo.png';
 
@@ -12,9 +13,11 @@ class Description extends Component {
             <div className='description'>
                 <h1>_</h1>
                 <img className='logo' src={logo} alt="Joseph Akayesi" />
-                <p>{bio.introduction}</p>
-                <p>{bio.body}</p>
-                <p>{bio.conclusion}</p>
+                <Linkify>
+                    <p>{bio.introduction}</p>
+                    <p>{bio.body}</p>
+                    <p>{bio.conclusion}</p>
+                </Linkify>
             </div>
         )
     }

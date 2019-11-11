@@ -30,7 +30,7 @@ p {
 }
 
 a {
-  color: #fff;
+  color: red;
   -webkit-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
 }
