@@ -23,8 +23,7 @@
     "express": "^4.17.1",
     "express-sslify": "^1.2.0",
     "mongoose": "^5.6.7",
-    "prerender-node": "^3.2.4",
-    "react-linkify": "^1.0.0-alpha"
+    "prerender-node": "^3.2.4"
   },
   "jest": {
     "verbose": true,
