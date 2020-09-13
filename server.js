@@ -6,7 +6,10 @@ const mongoose = require('mongoose')
 const path = require('path')
 const enforce = require('express-sslify')
 const prerender = require('prerender-node')
+const compression = require('compression')
 
+// Use compression
+app.use(compression())
 // Express SSLify
 app.use(enforce.HTTPS({ trustProtoHeader: true }))
 
