@@ -3,7 +3,6 @@ import axios from 'axios'
 
 // Set bio
 export const setBio = () => dispatch => {
-    console.log('should set')
     axios.get('/api/bio')
         .then(res => dispatch({
             type: SET_BIO,

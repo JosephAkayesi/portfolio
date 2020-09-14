@@ -16,7 +16,7 @@ $mobile: 480px;
   opacity: 0;
 
   @include mobile {
-    background: transparent url('./assets/images/background.jpg') no-repeat center bottom;
+    background: transparent url('./assets/images/background.jpg') center bottom;
 
   }
 }

@@ -30,7 +30,7 @@ app.use(prerender.set('prerenderToken', process.env.PRERENDERTOKEN))
 const db = require('./config/keys').mongoURI
 
 // Connect to MongoDB
-mongoose.connect(db, { useNewUrlParser: true })
+mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err))
 

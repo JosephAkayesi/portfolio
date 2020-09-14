@@ -11,7 +11,7 @@
 
 @media screen and (min-width: 480px) {
   .app {
-    background: transparent url("./assets/images/background.jpg") no-repeat center bottom;
+    background: transparent url("./assets/images/background.jpg") center bottom;
   }
 }
 
